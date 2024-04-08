@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  web:
+    image:  aghayanmarat971/simple-django-project-web:latest
+    environment:
+      - DB_HOST=db
+      - DB_NAME=world
+      - DB_USER=root
+      - DB_PASSWORD=12345
+    ports:
+      - "8001:8001"
+
+  db:
+    image:  aghayanmarat971/simple-django-project-db:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345
+
+
+
+
+
+
